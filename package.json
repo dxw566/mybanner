@@ -1,12 +1,15 @@
 {
-  "name": "my-banner",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@dxwu/my-banner",
+  "version": "0.1.2",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "pkg": "vue-cli-service build --target lib --name my-banner ./src/components/index.js"
   },
+  "main": "./dist/my-banner.common.js",
+  "files": ["dist/*", "src/*", "public/*", "*.json", "*.js"],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
@@ -18,6 +21,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
